@@ -5,7 +5,7 @@ UnitFunctionTest::UnitFunctionTest(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::UnitFunctionTest)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);//zz
 }
 
 UnitFunctionTest::~UnitFunctionTest()
