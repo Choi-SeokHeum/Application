@@ -8,8 +8,18 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    int result = 0;
+
     UnitFunctionTest * instance = new UnitFunctionTest();
     instance->show();
 
-    return a.exec();
+    if( instance->start() )
+    {
+        result = a.exec();
+    }
+
+    instance->stop();
+    delete instance;
+
+    return result;
 }

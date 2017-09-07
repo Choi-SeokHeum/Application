@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+class FileSearchManager;
+
 namespace Ui {
 class UnitFunctionTest;
 }
@@ -15,8 +17,13 @@ public:
     explicit UnitFunctionTest(QWidget *parent = 0);
     ~UnitFunctionTest();
 
+public:
+    virtual bool start();
+    virtual void stop();
+
 private:
     Ui::UnitFunctionTest *ui;
+    FileSearchManager * m_fileSearchManager;
 };
 
 #endif // UNIT_FUNCTION_TEST_HPP
